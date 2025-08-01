@@ -1,4 +1,5 @@
 using UnityEngine;
+// Inherits from Shape (OOP: Inheritance)
 public class CapsuleShape : Shape
 {
     public override void DisplayText()

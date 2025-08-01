@@ -1,5 +1,5 @@
 using UnityEngine;
-
+// Inherits from Shape (OOP: Inheritance)
 public class SphereShape : Shape
 {
     public override void DisplayText()
