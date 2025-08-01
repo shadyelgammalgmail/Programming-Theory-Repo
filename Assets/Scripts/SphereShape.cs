@@ -4,6 +4,6 @@ public class SphereShape : Shape
 {
     public override void DisplayText()
     {
-        Debug.Log("I am a Sphere!");
+        UIManager.Instance.ShowMessage("I am a Sphere!");
     }
 }

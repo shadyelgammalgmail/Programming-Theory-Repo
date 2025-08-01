@@ -1,10 +1,14 @@
 using UnityEngine;
 
+// OOP: Abstraction (defines high-level DisplayText function for all shapes)
+// OOP: Inheritance (base class for all shape types)
+// OOP: Encapsulation (private fields with controlled public access)
 public abstract class Shape : MonoBehaviour
 {
     private string _name;
     private Color _color;
 
+    //  Encapsulation via property with validation
     public string Name
     {
         get => _name;
@@ -19,14 +23,16 @@ public abstract class Shape : MonoBehaviour
 
     void Start()
     {
+        // Set the color of the shape when scene starts
         GetComponent<Renderer>().material.color = Color;
     }
 
     void OnMouseDown()
     {
-        DisplayText();
+        // Called when the shape is clicked
+        DisplayText(); // Abstraction + Polymorphism
     }
 
+    // Polymorphism: Each shape overrides this to show its own message
     public abstract void DisplayText();
 }
-

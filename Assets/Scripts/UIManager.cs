@@ -1,18 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+// Central manager for UI updates (supports abstraction)
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static UIManager Instance; // Singleton instance
+
+    public TextMesh shapesText; // Reference to TextMesh object in the scene
+
+    void Awake()
     {
-        
+        // Simple Singleton pattern
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    // Abstraction: A high-level method to update UI
+    public void ShowMessage(string message)
     {
-        
+        if (shapesText != null)
+        {
+            shapesText.text = message;
+        }
     }
 }
