@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class Shape : MonoBehaviour
 {
     private string _name;
-    private Color _color;
+    private Color _color=Color.white;//set default to white
 
     //  Encapsulation via property with validation
     public string Name

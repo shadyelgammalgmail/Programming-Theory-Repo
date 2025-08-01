@@ -20,6 +20,8 @@ public class UIManager : MonoBehaviour
         if (shapesText != null)
         {
             shapesText.text = message;
+        }else{
+            Debug.LogWarning("ShapesText is not assigned in UIManager!");
         }
     }
 }
